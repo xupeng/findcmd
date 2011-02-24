@@ -12,7 +12,7 @@ This is a simple command line tool for searching through PATHs to find out comma
       keywords='command sysutils',
       author='Xupeng Yun',
       author_email='xupeng@xupeng.me',
-      url='http://blog.xupeng.me',
+      url='https://github.com/xupeng/findcmd',
       license='Apache-2.0',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
