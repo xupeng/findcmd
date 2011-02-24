@@ -1,0 +1,11 @@
+findcmd - A command line tool for searching commands
+
+findcmd is a simple command line tool for searching through PATHs to find out commands contain certian keywords.
+
+Usage: findcmd [options] cmd
+
+Options:
+  -h, --help            show this help message and exit
+  -c, --case-sensitive
+  -e, --match-all
+  --no-color
