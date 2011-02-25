@@ -40,7 +40,7 @@ def findcmd(cmd, paths=None, case_sensitive=False, exactly_match=False):
 
         matches = [os.path.join(path, b) for b in os.listdir(path) if \
                                                             re_cmd.search(b)]
-        results.extend(matches)
+        results.extend([cmd for cmd in matches if os.path.isfile(cmd)])
 
     return sorted(results)
 
