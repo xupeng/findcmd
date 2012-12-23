@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import sys, os
 
 ROOT = os.path.abspath(os.path.dirname(__file__))
-README = open(os.path.join(ROOT, 'README')).read()
+README = open(os.path.join(ROOT, 'README.rst')).read()
 
 version = '0.1.1'
 
