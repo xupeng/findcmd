@@ -14,7 +14,8 @@ import sys
 import os
 from optparse import OptionParser
 
-from colors import red
+from .colors import red
+
 
 def findcmd(cmd, paths=None, case_sensitive=False, exactly_match=False):
     """Find cmds which match given patterns in paths
@@ -43,6 +44,7 @@ def findcmd(cmd, paths=None, case_sensitive=False, exactly_match=False):
         results.extend([cmd for cmd in matches if os.path.isfile(cmd)])
 
     return sorted(results)
+
 
 def main():
     """Entry point
@@ -79,16 +81,17 @@ def main():
         return 1
 
     if options.no_color:
-        print '\n'.join(results)
+        print('\n'.join(results))
     else:
         def repl(match):
             """Colorize matched text"""
             return red(match.group(), True)
         re_key = re.compile('%s' % cmd, re.IGNORECASE)
         for result in results:
-            print re_key.sub(repl, result)
+            print(re_key.sub(repl, result))
 
     return 0
+
 
 if __name__ == '__main__':
     sys.exit(main())
